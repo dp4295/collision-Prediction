@@ -1,1 +1,4 @@
 # collision-Prediction
+
+Feedforward neural network with two hidden layers, each followed by a dropout layer and a ReLU activation function, model accurately predicts collision given sensor and action information. The network is flexible, allowing customization of input size, hidden layer sizes, output size, and dropout rate. Wrote a data loading script that utilizes the Nav_Dataset class to load and preprocess data. Split the dataset into training and testing sets, and PyTorch data loaders (train_loader and test_loader) are created. The dataset is normalized using MinMaxScaler, and the scaler is saved for future inference.
+Implemented training script that utilizes a custom loss function (CustomLoss) that combines Mean Squared Error (MSE) loss with an additional collision loss. The training script includes visualization of test set loss over epochs using matplotlib. Training is performed over multiple epochs, with early stopping based on test set performance.
